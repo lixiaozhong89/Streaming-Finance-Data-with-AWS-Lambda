@@ -1,4 +1,4 @@
-# Project 3: Streaming Finance Data with AWS Lambda
+# Streaming Finance Data with AWS Lambda
 
  
 
