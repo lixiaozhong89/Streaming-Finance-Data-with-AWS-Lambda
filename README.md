@@ -12,16 +12,16 @@ For this project, I provisioned a Lambda function to generate a real time data p
 
 Create a lambda function, using the **yfinance** module, to grab pricing information for each of the following stocks:
 
-●    **Facebook (FB)**
-●    **Shopify (SHOP)**
-●    **Beyond Meat (BYND)**
-●    **Netflix (NFLX)**
-●    **Pinterest (PINS)**
-●    **Square (SQ)**
-●    **The Trade Desk (TTD)**
-●    **Okta (OKTA)**
-●    **Snap (SNAP)**
-●    **Datadog (DDOG)**
+**Facebook (FB)**
+**Shopify (SHOP)**
+**Beyond Meat (BYND)**
+**Netflix (NFLX)**
+**Pinterest (PINS)**
+**Square (SQ)**
+**The Trade Desk (TTD)**
+**Okta (OKTA)**
+**Snap (SNAP)**
+**Datadog (DDOG)**
 
 I collected **one full day’s worth of stock HIGH and LOW prices** for each company listed above on Monday, May 2nd 2022, at a five-minute interval. ‘history’ function from yfinance library was applied to extract historical data.
 
