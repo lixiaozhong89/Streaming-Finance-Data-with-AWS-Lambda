@@ -44,7 +44,7 @@ I collected **one full day’s worth of stock HIGH and LOW prices** for each com
 
 I set up a Glue crawler so that I can run AWS Athena queries against finance data in S3 bucket. In Athena, I wrote and ran a query to get **the highest hourly stock “high” per company** from the companies list above. 
 
-##Query Results![query_results](project03/results.png)
+##Query Results![query_results](Streaming Finance Data with AWS Lambda/results.png)
 
 #Data Visualization
 
