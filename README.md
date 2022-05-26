@@ -2,13 +2,13 @@ Project 3: Streaming Finance Data with AWS Lambda
 
  
 
-#Introduction
+Introduction
 
 For this project, I provisioned a Lambda function to generate a real time data pipeline for finance data records for interactive querying. 
 
 
 
-#Data Transformation
+Data Transformation
 
 Create a lambda function, using the **yfinance** module, to grab pricing information for each of the following stocks:
 
@@ -25,28 +25,29 @@ Create a lambda function, using the **yfinance** module, to grab pricing informa
 
 I collected **one full day’s worth of stock HIGH and LOW prices** for each company listed above on Monday, May 2nd 2022, at a five-minute interval. ‘history’ function from yfinance library was applied to extract historical data.
 
-##Execution Results in AWS Lambda Management Console 
+Execution Results in AWS Lambda Management Console 
 **![lambda_execution](assets/exec_results.png)**
 
 
 
-#Data Collecting
+Data Collecting
 
-##Kinisis Configuration
+Kinisis Configuration
 **![kinesis_config](assets/kinesis_config.png)**
 
-##Data Collected in S3 Bucket
+Data Collected in S3 Bucket
 **![kinesis_config](assets/screenshot_of_s3_bucket.png)**
 
 
 
-#Data Analysis
+Data Analysis
 
 I set up a Glue crawler so that I can run AWS Athena queries against finance data in S3 bucket. In Athena, I wrote and ran a query to get **the highest hourly stock “high” per company** from the companies list above. 
 
-##Query Results![query_results](Streaming Finance Data with AWS Lambda/results.png)
+Query Results
+**![query_results](Streaming Finance Data with AWS Lambda/results.png)**
 
-#Data Visualization
+Data Visualization
 
 With the query data from AWS Athena, I imported it into Pandas DataFrames to generate 4 visualizations as follow:
 
