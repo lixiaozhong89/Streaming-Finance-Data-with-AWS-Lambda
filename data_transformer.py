@@ -2,11 +2,15 @@
 import json
 import boto3
 import sys
-
+import os
 #Lambda layer added
 import yfinance as yf
 
-kinesis = boto3.client('kinesis', "us-east-2")
+StreamName = os.environ['StreamName']
+REGION = os.environ['REGION']
+
+
+kinesis = boto3.client('kinesis', region_name = REGION)
 stocks = ["FB", "SHOP", "BYND", "SNAP", "NFLX", "PINS", "SQ", "TTD", "OKTA", "DDOG"]
 
     
@@ -27,7 +31,7 @@ def lambda_handler(event, context):
                 data = json.dumps(data)+"\n"
                 #print(data)
                 output = kinesis.put_record(
-                    StreamName="project3-datastream",
+                    StreamName= StreamName,
                     Data=data,
                     PartitionKey="partitionkey")
                 #print(output)
